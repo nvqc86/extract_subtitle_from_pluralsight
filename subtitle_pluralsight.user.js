@@ -25,8 +25,7 @@ function srtTimeFormat(totalSeconds) { //12.345
 $(document).ready(function(){
     setTimeout(function(){
         $("h3 a").after('<input type="button" class="download-subtitle" value="Create Download Link" />');
-    }, 5000); //wait 5 seconds to appear the "Download button"; depend on your internet speed, adjust 5000 (5000 = 5 seconds) for your needs
-	$(".download-subtitle").on("click", function(){
+        $(".download-subtitle").on("click", function(){
 		var parent = $(this).parent().parent();
 		var subtitleLines = parent.find("p span a");
 
@@ -59,4 +58,5 @@ $(document).ready(function(){
 		$(this).parent().append('<a href="' + uriContent + '" download="' + fileName + '">Download</a>');
 
 	});
+    }, 5000); //wait 5 seconds to appear the "Download button"; depend on your internet speed, adjust 5000 (5000 = 5 seconds) for your needs
 });
